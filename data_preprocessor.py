@@ -32,12 +32,11 @@ class DataPreprocessor():
             print(self.audioFeatureExtractor.feature_extraction(file_name))
             
     
-
 if __name__ == "__main__":
     dataPreprocessor = DataPreprocessor()
     # dataPreprocessor.extract_audio()
     # dataPreprocessor.extract_frames_from_video(5)
     # dataPreprocessor.extract_faces_from_frames()
-    dataPreprocessor.extract_features_from_audio()
+    # dataPreprocessor.extract_features_from_audio()
 
     
