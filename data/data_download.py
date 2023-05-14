@@ -7,6 +7,7 @@ def download_data():
         try:
             yt = YouTube("https://www.youtube.com/watch?v=" + audio_row[0], use_oauth=True, allow_oauth_cache=True)
             yt.streams.first().download('videos', audio_row[0] + ".mp4")
+            print(">>>> Video downloaded is: ", audio_row[0] + ".mp4")
         except Exception as e:
             print("error while creating video for id ", audio_row[0])
             print(e)
