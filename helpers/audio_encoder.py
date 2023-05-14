@@ -12,4 +12,7 @@ class AudioFeatureExtraction():
     def feature_extraction(self, filename):
         aud, sr = librosa.load(self.audio_path + filename, mono = True, duration = self.duration)
         return np.array((aud, sr, self.feature_count)[0])
-
+    
+    def feature_extraction_test(self, filename, filepath):
+        aud, sr = librosa.load(filepath + filename, mono = True, duration = self.duration)
+        return np.array((aud, sr, self.feature_count)[0])
